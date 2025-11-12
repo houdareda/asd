@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('guestForm');
+  const paymentSection = document.querySelector('.payment-card');
+  const paymentTitleEl = document.getElementById('paymentTitle');
   // Summary elements
   const summaryList = document.getElementById('summaryList');
   const summaryTotal = document.getElementById('summaryTotal');
@@ -158,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const roomOk = validateField(fields.roomNumber); // optional
 
     if (firstOk && lastOk && emailOk && hotelOk && phoneOk && natOk && roomOk) {
-      // Proceed to payment or next step
       // Save info if requested
       if (fields.saveInfo && fields.saveInfo.checked) {
         const payload = {
@@ -175,7 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('checkoutSaved', JSON.stringify(payload));
         } catch (_) {}
       }
-      alert('Information looks good. Proceeding to payment...');
+      // Smooth-scroll to payment section and highlight it
+      if (paymentSection) {
+        paymentSection.classList.add('highlight');
+        paymentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Focus first payment radio to guide the user
+        const firstRadio = paymentSection.querySelector('input[type="radio"]');
+        firstRadio?.focus();
+        setTimeout(() => paymentSection.classList.remove('highlight'), 1500);
+      }
     } else {
       // Focus first invalid
       const invalid = document.querySelector('.form-group.invalid input, .form-group.invalid select');
@@ -239,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const confirmBtn = document.getElementById('confirmBooking');
+  const THANKS_URL = '../est.html'; // placeholder; replace with your final thanks page
   if (confirmBtn) {
     confirmBtn.addEventListener('click', () => {
       // Optionally, ensure required forms are valid first
@@ -251,7 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
         invalid?.focus();
         return;
       }
-      alert(`Booking confirmed. Payment method: ${selectedMethod === 'link' ? 'Pay Now (email link)' : selectedMethod === 'spot' ? 'Pay on Spot' : 'Pay on Website'}`);
+      // All good: go to placeholder thanks page
+      window.location.href = THANKS_URL;
     });
   }
 });

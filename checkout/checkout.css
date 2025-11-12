@@ -316,6 +316,13 @@
   position: sticky;
   top: 80px;
 }
+
+/* Focus highlight when jumping to payment section */
+.payment-card.highlight {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(51,92,145,0.10);
+  transition: box-shadow .3s ease, border-color .3s ease;
+}
 .summary h3 {
   font-size: 20px;
   margin-bottom: 12px;
