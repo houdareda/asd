@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egyptra.pro - Best Egypt Tours & Activities | Book Now</title>
+
+       <meta name="description" content="Book Egypt tours, Cairo day trips, Nile experiences, desert adventures and top activities all in one place. Local experts, flexible dates and instant booking." />
+
+    <!-- icon -->
+    <link rel="icon" href="img/logo.png" />
+    <link rel="preload" as="image" href="/img/hero.webp">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    
+
+  </head>
+
+  <body>
+
+
+    <main class="checkout-page">
+      <section class="container">
+        <!-- Steps Progress -->
+        <div class="checkout-steps" aria-label="Checkout steps">
+          <div class="step completed">
+            <div class="circle"><i class="fas fa-check"></i></div>
+            <div class="label">Select</div>
+          </div>
+          <div class="connector"></div>
+          <div class="step current" aria-current="step">
+            <div class="circle">2</div>
+            <div class="label">Checkout</div>
+          </div>
+          <div class="connector"></div>
+          <div class="step upcoming" aria-disabled="true">
+            <div class="circle">3</div>
+            <div class="label">Confirm</div>
+          </div>
+        </div>
+
+        <!-- Lead Guest Information -->
+        <section class="guest-card" aria-labelledby="guestTitle">
+          <div class="card-header">
+            <div class="title-wrap">
+              <i class="fas fa-user"></i>
+              <h3 id="guestTitle">Lead Guest Information</h3>
+            </div>
+          </div>
+
+          <form id="guestForm" novalidate>
+            <div class="grid">
+              <!-- First Name -->
+              <div class="form-group" data-field="firstName">
+                <label for="firstName">First Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="firstName" name="firstName" required />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Last Name -->
+              <div class="form-group" data-field="lastName">
+                <label for="lastName">Last Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="lastName" name="lastName" required />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group" data-field="email">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group" data-field="phone">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                  <input type="tel" id="phone" name="phone" placeholder="+201XXXXXXXXX" />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+                <p class="hint">Optional</p>
+              </div>
+
+              <!-- Nationality -->
+              <div class="form-group" data-field="nationality">
+                <label for="nationality">Nationality</label>
+                <div class="input-wrapper">
+                  <select id="nationality" name="nationality">
+                    <option value="">Select nationality</option>
+                    <option>Egypt</option>
+                    <option>Saudi Arabia</option>
+                    <option>United Arab Emirates</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>France</option>
+                    <option>Italy</option>
+                    <option>Turkey</option>
+                  </select>
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+                <p class="hint">Optional</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Continue to Payment
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Hotel Information -->
+        <section class="info-card-checkout hotel-card" aria-labelledby="hotelTitle">
+          <div class="card-header">
+            <div class="title-wrap">
+              <i class="fas fa-hotel"></i>
+              <h3 id="hotelTitle">Hotel Information</h3>
+            </div>
+          </div>
+
+          <form id="hotelForm" novalidate>
+            <div class="grid">
+              <!-- Hotel Name (required) -->
+              <div class="form-group" data-field="hotelName">
+                <label for="hotelName">Hotel Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="hotelName" name="hotelName" required />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Room Number (optional) -->
+              <div class="form-group" data-field="roomNumber">
+                <label for="roomNumber">Room Number <span class="hint">Optional</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="roomNumber" name="roomNumber" />
+                  <span class="field-status" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-circle-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Save info row -->
+            <div class="checkbox-row">
+              <input type="checkbox" id="saveInfo" />
+              <label for="saveInfo">
+                <i class="fas fa-floppy-disk"></i>
+                <span>Save my information for next time</span>
+              </label>
+            </div>
+            <p class="save-hint">Your information will be securely stored in your browser for faster booking next time.</p>
+
+            <div class="card-divider"></div>
+
+                  <div class="title-wrap">
+              <i class="fas fa-tasks"></i>
+              <h3 id="hotelTitle">Additional Information</h3>
+            </div>
+            
+            <div class="form-group" data-field="notes">
+              <label for="notes">Special Requests or Notes</label>
+              <div class="input-wrapper">
+                <textarea id="notes" name="notes" rows="4" placeholder=""></textarea>
+              </div>
+              <p class="hint">Optional</p>
+            </div>
+        </form>
+        </section>
+
+        <!-- Select Payment Method -->
+        <section class="info-card-checkout payment-card" aria-labelledby="paymentTitle">
+          <div class="card-header">
+            <div class="title-wrap">
+              <i class="fas fa-wallet"></i>
+              <h3 id="paymentTitle">Select Payment Method</h3>
+            </div>
+          </div>
+
+          <div class="payment-options">
+            <!-- Pay Now (link via email) -->
+            <label class="payment-option active" data-method="link" for="payLink">
+              <input type="radio" name="paymentMethod" id="payLink" value="link" checked />
+              <div class="option-content">
+                <span class="custom-radio" aria-hidden="true"></span>
+                <div class="texts">
+                  <div class="title">Pay Now</div>
+                  <div class="subtitle">Receive secure payment link via email</div>
+                </div>
+                <i class="fa-regular fa-envelope option-icon" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <!-- Pay on Spot -->
+            <label class="payment-option" data-method="spot" for="paySpot">
+              <input type="radio" name="paymentMethod" id="paySpot" value="spot" />
+              <div class="option-content">
+                <span class="custom-radio" aria-hidden="true"></span>
+                <div class="texts">
+                  <div class="title">Pay on Spot</div>
+                  <div class="subtitle">Cash or card payment during your tour</div>
+                </div>
+                <i class="fa-regular fa-credit-card option-icon" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <!-- Pay on Website (instant online) -->
+            <label class="payment-option" data-method="website" for="payWebsite">
+              <input type="radio" name="paymentMethod" id="payWebsite" value="website" />
+              <div class="option-content">
+                <span class="custom-radio" aria-hidden="true"></span>
+                <div class="texts">
+                  <div class="title">Pay on Website</div>
+                  <div class="subtitle">Complete payment online on our website</div>
+                </div>
+                <i class="fa-solid fa-globe option-icon" aria-hidden="true"></i>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="confirmBooking" class="btn btn-primary confirm-btn">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <span>Confirm Booking</span>
+            </button>
+            <p class="confirm-hint">Secure e-payment link will be delivered via email (Perfect for customized plans, single tours, or multiple bookings)</p>
+          </div>
+        </section>
+
+        <!-- Booking Summary (right column) -->
+        <aside class="summary" aria-label="Booking Summary">
+          <h3>Booking Summary</h3>
+          <!-- Promo code -->
+          <div class="promo-row">
+            <input type="text" id="promoInput" placeholder="Enter promo code" aria-label="Promo code" />
+            <button type="button" id="promoApply" class="btn btn-secondary">Apply</button>
+          </div>
+          <ul id="summaryList" class="summary-list"></ul>
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="summaryTotal">$0</span>
+          </div>
+          <div class="payment">
+            <p>Secure payment with</p>
+            <div class="icons">
+              <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
+              <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
+              <i class="fa-brands fa-cc-amex" aria-hidden="true"></i>
+              <i class="fa-brands fa-cc-paypal" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- Trust badges: SSL, Secure Checkout, 24/7 Support -->
+          <div class="trust-badges" aria-label="Security and Support">
+            <div class="badge-item">
+              <div class="badge-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+              <div class="badge-texts">
+                <strong>SSL Secured</strong>
+                <p>256-bit TLS encryption</p>
+              </div>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-icon"><i class="fa-regular fa-credit-card" aria-hidden="true"></i></div>
+              <div class="badge-texts">
+                <strong>Secure Checkout</strong>
+                <p>Safe payment processing</p>
+              </div>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+              <div class="badge-texts">
+                <strong>24/7 Customer Support</strong>
+                <p>We’re here anytime you need help</p>
+              </div>
+            </div>
+          </div>
+          <div class="protection">
+            <div>
+              <strong><i class="fa-solid fa-shield-halved"></i> Travel Protection</strong>
+              <p>Add travel insurance for peace of mind</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../js/header.js"></script>
+    <script src="checkout.js"></script>
+
+
+  </body>
+</html>

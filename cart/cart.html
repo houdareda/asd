@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | Egyptra</title>
+
+    <meta
+      name="description"
+      content="Review your selected tours before booking. Secure checkout, promo codes, and travel protection options."
+    />
+
+    <!-- icon -->
+    <link rel="icon" href="../img/logo.png" />
+    <link rel="preload" as="image" href="../img/hero.webp" />
+
+    <!-- base styles (if needed) -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Font Awesome (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- cart styles -->
+    <link rel="stylesheet" href="./cart.css" />
+
+    <!-- booking modal styles for cart page only -->
+    <link rel="stylesheet" href="./cart-booking.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+        <header class="header-white">
+      <nav class="container">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Egyptra - Egypt Tours and Travel" />
+        </div>
+
+        <ul class="nav_links ul_links">
+          <li class="nav_link dropdown">
+            <a href="#"
+              ><i class="fas fa-globe-africa"></i> <span>Destinations</span></a
+            >
+
+            <ul class="dropdown_menu dropdown_dest">
+              <li>
+                <a href="#"> Sharm El-Sheikh </a>
+              </li>
+              <li>
+                <a href="#"> Hurghada </a>
+              </li>
+              <li>
+                <a href="#"> Cairo </a>
+              </li>
+              <li>
+                <a href="#"> Luxor </a>
+              </li>
+              <li>
+                <a href="#"> Marsa Alam </a>
+              </li>
+              <li>
+                <a href="#"> El Gouna </a>
+              </li>
+              <li>
+                <a href="#"> Makadi Bay </a>
+              </li>
+              <li>
+                <a href="#"> Safaga </a>
+              </li>
+              <li>
+                <a href="#"> Sahl Hasheesh </a>
+              </li>
+              <li>
+                <a href="#"> Soma Bay </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav_link dropdown">
+            <a href="#"><i class="fas fa-th-list"></i> <span>Tour Category</span></a>
+
+            <ul class="dropdown_menu">
+              <li>
+                <a href="#"> Historical Tours </a>
+              </li>
+              <li>
+                <a href="#"> Boat Tours </a>
+              </li>
+              <li>
+                <a href="#"> Safari Tours </a>
+              </li>
+              <li>
+                <a href="#"> Water Sports </a>
+              </li>
+              <li>
+                <a href="#"> Multi-Day Tours </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav_link dropdown">
+            <a href="#"><i class="fas fa-map-marked-alt guide-icon"></i> <span>Travel Guide</span></a>
+
+            <ul class="dropdown_menu">
+              <li>
+                <a href="#"> Hurghada Guide </a>
+              </li>
+              <li>
+                <a href="#"> Sharm El-Sheikh Guide </a>
+              </li>
+              <li>
+                <a href="#"> Cairo Guide </a>
+              </li>
+              <li>
+                <a href="#"> Luxor Guide </a>
+              </li>
+              <li>
+                <a href="#"> Marsa Alam Guide </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav_link">
+            <a href="#"><i class="fas fa-award"></i> <span>Why Us</span></a>
+          </li>
+          <li class="nav_link">
+            <a href="#"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+          </li>
+
+          <li class="nav_link nav_link_mobile">
+            <a href="#"><i class="far fa-user"></i> <span>Login</span></a>
+          </li>
+          <li class="nav_link nav_link_mobile language dropdown">
+            <a href="#"
+              ><img src="../img/language/gb.svg" alt="English" /> <span>English</span></a
+            >
+            <ul class="dropdown_menu">
+              <li>
+                <a href="#">
+                  <img src="../img/language/gb.svg" alt="English" />
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/de.svg" alt="Deutsch" />
+                  Deutsch
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/fr.svg" alt="Français" />
+                  Français
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/it.svg" alt="Italiano" />
+                  Italiano
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/nl.svg" alt="Nederlands" />
+                  Nederlands
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/es.svg" alt="Español" />
+                  Español
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/pl.svg" alt="Polski" />
+                  Polski
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/tr.svg" alt="Türkçe" />
+                  Türkçe
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/ro.svg" alt="Română" />
+                  Română
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/ru.svg" alt="Русский" />
+                  Русский
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/sa.svg" alt="العربية" />
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/cn.svg" alt="Chinese" />
+                  Chinese
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/in.svg" alt="Hindi" />
+                  Hindi
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav_icons ul_links">
+          <li class="language dropdown">
+            <a href="#" class="login"
+              ><img src="../img/language/gb.svg" alt="English"
+            /></a>
+            <ul class="dropdown_menu">
+              <li>
+                <a href="#">
+                  <img src="../img/language/gb.svg" alt="English" />
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/de.svg" alt="Deutsch" />
+                  Deutsch
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/fr.svg" alt="Français" />
+                  Français
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/it.svg" alt="Italiano" />
+                  Italiano
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/nl.svg" alt="Nederlands" />
+                  Nederlands
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/es.svg" alt="Español" />
+                  Español
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/pl.svg" alt="Polski" />
+                  Polski
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/tr.svg" alt="Türkçe" />
+                  Türkçe
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/ro.svg" alt="Română" />
+                  Română
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/ru.svg" alt="Русский" />
+                  Русский
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/sa.svg" alt="العربية" />
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/cn.svg" alt="Chinese" />
+                  Chinese
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/language/in.svg" alt="Hindi" />
+                  Hindi
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="currency dropdown">
+            <a href="#" class="login"> <span>€</span></a>
+            <ul class="dropdown_menu">
+              <li>
+                <a href="#">
+                  <span class="currency-symbol">€</span>
+                  EUR - Euro
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="currency-symbol">£</span>
+                  GBP - British Pound
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="currency-symbol">$</span>
+                  USD - US Dollar
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="currency-symbol">ج.م</span>
+                  EGP - Egyptian Pound
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="login">
+            <a href="#" class="login"><i class="fas fa-user"></i></a>
+          </li>
+
+          <li class="header-cart-container">
+            <button
+              id="cartTrigger"
+              class="cart-trigger"
+              aria-label="Shopping Cart"
+              aria-expanded="false"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cartCount" class="cart-count">0</span>
+            </button>
+            <div id="cartDropdown" class="cart-dropdown">
+              <div class="cart-header">
+                <h5>Shopping Cart</h5>
+                <span id="cartItemsCount" class="cart-items-count"
+                  >0 items</span
+                >
+              </div>
+              <div id="cartItems" class="cart-items">
+                <!-- Cart items will be populated here -->
+              </div>
+              <div id="emptyCartMessage" class="empty-cart-message">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <span>Start adding your favorite products</span>
+              </div>
+              <div class="cart-footer">
+                <div class="cart-total">
+                  <span>Total: </span>
+                  <span id="cartTotal" class="total-amount">€0.00</span>
+                </div>
+                <div class="cart-actions">
+                  <button
+                    class="view-cart-btn"
+                    onclick="window.location.href='/cart'"
+                  >
+                    <i class="fas fa-shopping-bag"></i>
+                    View Cart
+                  </button>
+                  <button
+                    class="checkout-btn"
+                    onclick="window.location.href='/checkout'"
+                  >
+                    <i class="fas fa-credit-card"></i>
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- Desktop Search -->
+          <li class="header-search-container">
+            <button
+              id="searchTrigger"
+              class="search-trigger"
+              aria-label="Search"
+              aria-expanded="false"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+            <div id="searchDropdown" class="search-dropdown">
+              <form
+                id="searchForm"
+                action="/search"
+                method="GET"
+                class="search-form"
+              >
+                <div class="search-input-container">
+                  <input
+                    type="text"
+                    id="searchInput"
+                    name="q"
+                    class="search-input"
+                    placeholder="Search destinations, tours..."
+                    autocomplete="off"
+                    aria-label="Search tours and activities"
+                  />
+                  <button
+                    type="button"
+                    id="searchClearBtn"
+                    class="search-clear-btn"
+                    style="display: none"
+                    aria-label="Clear search"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <button
+                    type="submit"
+                    class="search-submit-btn"
+                    aria-label="Submit search"
+                  >
+                    <i class="fas fa-search"></i>
+                    Search
+                  </button>
+                </div>
+              </form>
+              <div id="searchSuggestions" class="search-suggestions"></div>
+              <div class="popular-searches">
+                <h6>Popular Searches</h6>
+                <div class="quick-search-tags">
+                  <a href="/search?q=snorkeling" class="quick-search-tag">
+                    <i class="fas fa-mask-snorkel"></i>
+                    Snorkeling
+                  </a>
+                  <a href="/search?q=pyramids" class="quick-search-tag">
+                    <i class="fas fa-monument"></i>
+                    Pyramids
+                  </a>
+                  <a href="/search?q=desert+safari" class="quick-search-tag">
+                    <i class="fas fa-truck-monster"></i>
+                    Desert Safari
+                  </a>
+                  <a href="/search?q=hurghada" class="quick-search-tag">
+                    <i class="fas fa-umbrella-beach"></i>
+                    Hurghada
+                  </a>
+                  <a href="/search?q=luxor" class="quick-search-tag">
+                    <i class="fas fa-landmark"></i>
+                    Luxor
+                  </a>
+                  <a href="/search?q=diving" class="quick-search-tag">
+                    <i class="fas fa-swimmer"></i>
+                    Diving
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="mobile_menu_btn">
+            <i class="fas fa-bars"></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- Currency Modal for Mobile -->
+    <div class="currency-modal-overlay" id="currencyModalOverlay">
+      <div class="currency-modal" id="currencyModal">
+        <div class="currency-modal-header">
+          <h3>Select Currency</h3>
+          <button class="currency-modal-close" id="currencyModalClose">
+            &times;
+          </button>
+        </div>
+        <div class="currency-modal-content">
+          <div class="currency-option" data-currency="EUR" data-symbol="€">
+            <span class="currency-symbol">€</span>
+            <span class="currency-name">EUR - Euro</span>
+          </div>
+          <div class="currency-option" data-currency="GBP" data-symbol="£">
+            <span class="currency-symbol">£</span>
+            <span class="currency-name">GBP - British Pound</span>
+          </div>
+          <div class="currency-option" data-currency="USD" data-symbol="$">
+            <span class="currency-symbol">$</span>
+            <span class="currency-name">USD - US Dollar</span>
+          </div>
+          <div class="currency-option" data-currency="EGP" data-symbol="ج.م">
+            <span class="currency-symbol">ج.م</span>
+            <span class="currency-name">EGP - Egyptian Pound</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Search Modal -->
+    <div id="mobileSearchModal" class="mobile-search-modal">
+      <div class="mobile-search-content">
+        <div class="mobile-search-header">
+          <h5>Search Tours & Activities</h5>
+          <button
+            id="mobileSearchClose"
+            class="close-search-modal"
+            aria-label="Close search"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form
+          id="mobileSearchForm"
+          action="/search"
+          method="GET"
+          class="mobile-search-form"
+        >
+          <input
+            type="text"
+            id="mobileSearchInput"
+            name="q"
+            class="mobile-search-input"
+            placeholder="Search destinations, tours..."
+            autocomplete="off"
+            aria-label="Search tours and activities"
+          />
+          <button type="submit" class="mobile-search-submit">
+            <i class="fas fa-search"></i>
+            Search
+          </button>
+        </form>
+        <div class="mobile-popular-searches">
+          <h6>Popular Searches</h6>
+          <div class="mobile-search-tags">
+            <a href="/search?q=snorkeling" class="mobile-search-tag"
+              >Snorkeling</a
+            >
+            <a href="/search?q=pyramids" class="mobile-search-tag">Pyramids</a>
+            <a href="/search?q=desert+safari" class="mobile-search-tag"
+              >Desert Safari</a
+            >
+            <a href="/search?q=hurghada" class="mobile-search-tag">Hurghada</a>
+            <a href="/search?q=luxor" class="mobile-search-tag">Luxor</a>
+            <a href="/search?q=diving" class="mobile-search-tag">Diving</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Cart Modal -->
+    <div id="mobileCartModal" class="mobile-cart-modal">
+      <div class="mobile-cart-content">
+        <div class="mobile-cart-header">
+          <h5>Shopping Cart</h5>
+          <button
+            id="mobileCartClose"
+            class="close-cart-modal"
+            aria-label="Close cart"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="mobile-cart-body">
+          <div id="mobileCartItems" class="mobile-cart-items">
+            <!-- Mobile cart items will be populated here -->
+          </div>
+          <div id="mobileEmptyCartMessage" class="mobile-empty-cart-message">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Your cart is empty</p>
+            <span>Start adding your favorite products</span>
+          </div>
+        </div>
+        <div class="mobile-cart-footer">
+          <div class="mobile-cart-total">
+            <span>Total: </span>
+            <span id="mobileCartTotal" class="mobile-total-amount">€0.00</span>
+          </div>
+          <div class="mobile-cart-actions">
+            <button
+              class="mobile-view-cart-btn"
+              onclick="window.location.href='/cart'"
+            >
+              <i class="fas fa-shopping-bag"></i>
+              View Cart
+            </button>
+            <button
+              class="mobile-checkout-btn"
+              onclick="window.location.href='/checkout'"
+            >
+              <i class="fas fa-credit-card"></i>
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="cart-page">
+      <div class="container">
+        <div class="cart-header-page">
+          <h1>Your Cart</h1>
+          <p>Review your selected tours before booking</p>
+        </div>
+
+        <section class="cart-layout">
+          <!-- Left: Cart Items -->
+          <div class="cart-items-page">
+            <!-- Card #1 -->
+            <article
+              class="cart-card"
+              data-title="Pyramids Adventure"
+              data-city="Cairo"
+              data-price="64"
+              data-travelers="2"
+            >
+              <div class="card-media">
+                <img src="../img/about1.webp" alt="Pyramids of Giza" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Pyramids of Giza Adventure</h3>
+                <ul class="info-list">
+                  <li class="wid50"><i class="fa-solid fa-location-dot"></i> Cairo</li>
+                  <li class="wid50 date"><i class="fa-regular fa-calendar-days"></i> Tue, Nov 18, 2025</li>
+                  <li class="wid50"><i class="fa-solid fa-language"></i> English</li>
+                  <li class="wid50 time"><i class="fa-regular fa-clock"></i> 2:00 PM</li>
+                  <li class="participants-line"><i class="fa-solid fa-user"></i> 2 Adults</li>
+                  <li>
+                    <span class="label">Option:</span>
+                    <span>Double Quad ATV, Camel, Dinner, and Show</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-side">
+                <div class="card-actions">
+                  <button class="btn-icon edit" aria-label="Edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                  </button>
+                  <button class="btn-icon delete" aria-label="Delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="amount">$64</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card #2 -->
+            <article
+              class="cart-card"
+              data-title="Nile Dinner Cruise"
+              data-city="Cairo"
+              data-price="45"
+              data-travelers="2"
+            >
+              <div class="card-media">
+                <img src="../img/about2.webp" alt="Nile Cruise" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Nile River Dinner Cruise</h3>
+                <ul class="info-list">
+                  <li class="wid50"><i class="fa-solid fa-location-dot"></i> Cairo</li>
+                  <li class="wid50 date"><i class="fa-regular fa-calendar-days"></i> Wed, Nov 19, 2025</li>
+                  <li class="wid50"><i class="fa-solid fa-language"></i> English</li>
+                  <li class="wid50 time"><i class="fa-regular fa-clock"></i> 7:00 PM</li>
+                  <li class="participants-line"><i class="fa-solid fa-user"></i> 2 Adults</li>
+                  <li>
+                    <span class="label">Option:</span>
+                    <span>Buffet Dinner, Live Music & Tanoura Show</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-side">
+                <div class="card-actions">
+                  <button class="btn-icon edit" aria-label="Edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                  </button>
+                  <button class="btn-icon delete" aria-label="Delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="amount">$45</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card #3 -->
+            <article
+              class="cart-card"
+              data-title="Luxor Hot-Air Balloon"
+              data-city="Luxor"
+              data-price="120"
+              data-travelers="2"
+            >
+              <div class="card-media">
+                <img src="../img/bghero.webp" alt="Hot-Air Balloon" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Sunrise Hot-Air Balloon over Luxor</h3>
+                <ul class="info-list">
+                  <li class="wid50"><i class="fa-solid fa-location-dot"></i> Luxor</li>
+                  <li class="wid50 date"><i class="fa-regular fa-calendar-days"></i> Thu, Nov 20, 2025</li>
+                  <li class="wid50"><i class="fa-solid fa-language"></i> English</li>
+                  <li class="wid50 time"><i class="fa-regular fa-clock"></i> 4:30 AM</li>
+                  <li class="participants-line"><i class="fa-solid fa-user"></i> 2 Adults</li>
+                  <li>
+                    <span class="label">Option:</span>
+                    <span>Private Basket, Hotel Pickup & Light Breakfast</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-side">
+                <div class="card-actions">
+                  <button class="btn-icon edit" aria-label="Edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                  </button>
+                  <button class="btn-icon delete" aria-label="Delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </div>
+                <div class="price">
+                  <div class="amount">$120</div>
+                </div>
+              </div>
+            </article>
+
+
+            
+
+            <!-- Promo Code -->
+            <section class="promo">
+              <h3>Promo Code</h3>
+              <div class="promo-row">
+                <input id="promoInput" type="text" placeholder="Enter promo code" />
+                <button id="promoApply" class="btn-outline">Apply</button>
+              </div>
+            </section>
+
+            
+          </div>
+
+          <!-- Right: Summary -->
+          <aside class="summary">
+            <h3>Booking Summary</h3>
+            <ul id="summaryList" class="summary-list"></ul>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="summaryTotal">$0</span>
+            </div>
+            <button class="btn-primary">Proceed to Checkout</button>
+            <div class="payment">
+              <p>Secure payment with</p>
+              <div class="icons">
+                <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
+                <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
+                <i class="fa-brands fa-cc-amex" aria-hidden="true"></i>
+                <i class="fa-brands fa-cc-paypal" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="protection">
+              
+              <div>
+                <strong><i class="fa-solid fa-shield-halved"></i> Travel Protection</strong>
+                <p>Add travel insurance for peace of mind</p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Bottom centered actions -->
+        <div class="bottom-actions">
+          <a class="btn-secondary" href="../index.html">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Booking Bottom Sheet Modal (Edit Popup copied from product.html) -->
+    <div class="booking-modal-overlay" id="bookingModalOverlay">
+      <div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true">
+        <div class="booking-modal-header">
+          <div class="booking-title-row">
+            <h3>Edit Booking</h3>
+          </div>
+          <button class="booking-modal-close" id="bookingModalClose" aria-label="Close">&times;</button>
+        </div>
+        <div class="booking-modal-content">
+          <!-- Step: Date -->
+          <div class="booking-step active" data-step="date">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>Select Booking Date <span class="required">Required</span></h4>
+              </div>
+              <div class="selected-summary" aria-live="polite"></div>
+            </div>
+            <div class="step-body">
+              <input type="date" id="bookingDate" />
+              <p class="hint">Select any date from today up to 1 year ahead</p>
+            </div>
+          </div>
+
+          <!-- Step: Time -->
+          <div class="booking-step active" data-step="time">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-clock"></i>
+                <h4>Select Start Time</h4>
+              </div>
+              <div class="selected-summary"></div>
+            </div>
+            <div class="step-body time-grid">
+              <button class="time-option" data-time="09:00">09:00</button>
+              <button class="time-option" data-time="12:00">12:00</button>
+              <button class="time-option" data-time="15:00">15:00</button>
+            </div>
+          </div>
+
+          <!-- Step: Language -->
+          <div class="booking-step" data-step="language">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-language"></i>
+                <h4>Select Guide Language</h4>
+              </div>
+              <div class="selected-summary"></div>
+            </div>
+            <div class="step-body lang-grid">
+              <button class="lang-option active" data-lang="English"><img src="../../img/language/gb.svg" alt="GB" /> GB English</button>
+              <button class="lang-option" data-lang="German"><img src="../../img/language/de.svg" alt="DE" /> DE German</button>
+            </div>
+          </div>
+
+          <!-- Step: Options -->
+          <div class="booking-step" data-step="options">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-sliders-h"></i>
+                <h4>Options</h4>
+              </div>
+              <div class="selected-summary"></div>
+            </div>
+            <div class="step-body options-list">
+              <!-- Example option cards (copied) -->
+              <div class="option-card is-best selected" data-option="basic">
+                <input type="radio" name="tourOption" class="option-radio" value="basic" checked aria-label="Select this option">
+                <div class="option-header">
+                  <div class="title">Best Price</div>
+                </div>
+                <div class="option-body">
+                  <div class="price-badges">
+                    <span class="price-badge">Adults: €17.50</span>
+                    <span class="price-badge">Children: €10.00</span>
+                  </div>
+                  <div class="option-footer">
+                    <button class="details-toggle" type="button"><i class="fas fa-chevron-down icon-toggle" style="transform: rotate(0deg);"></i> Show Details</button>
+                  </div>
+                  <div class="option-details">
+                    Add a thrilling 10-minute parasailing ride to your tour.
+                  </div>
+                </div>
+              </div>
+              <div class="option-card" data-option="entrance">
+                <input type="radio" name="tourOption" class="option-radio" value="entrance" aria-label="Select this option">
+                <div class="option-header">
+                  <div class="title">Entrance Upgrade</div>
+                </div>
+                <div class="option-body">
+                  <div class="price-badges">
+                    <span class="price-badge">Adults: +€4.50</span>
+                  </div>
+                  <div class="option-footer">
+                    <button class="details-toggle" type="button"><i class="fas fa-chevron-down icon-toggle" style="transform: rotate(0deg);"></i> Show Details</button>
+                  </div>
+                  <div class="option-details">
+                    Priority entrance to attractions.
+                  </div>
+                </div>
+              </div>
+              <div class="option-card" data-option="parasailing">
+                <input type="radio" name="tourOption" class="option-radio" value="parasailing" aria-label="Select this option">
+                <div class="option-header">
+                  <div class="title">Parasailing Add-on</div>
+                </div>
+                <div class="option-body">
+                  <div class="price-badges">
+                    <span class="price-badge">Adults: +€18.50</span>
+                  </div>
+                  <div class="option-footer">
+                    <button class="details-toggle" type="button"><i class="fas fa-chevron-down icon-toggle" style="transform: rotate(0deg);"></i> Show Details</button>
+                  </div>
+                  <div class="option-details">
+                    Experience parasailing over the Red Sea.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step: Participants -->
+          <div class="booking-step twohead" data-step="participants" data-noauto="true">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-users"></i>
+                <h4>Number of Participants</h4>
+              </div>
+              <div class="selected-summary"></div>
+            </div>
+            <div class="step-body counters">
+              <div class="counter-row" data-type="adult">
+                <span class="label">Adults (12+ years)</span>
+                <div class="btns_counter">
+                  <button class="counter-btn minus" type="button">-</button>
+                  <span class="count">1</span>
+                  <button class="counter-btn plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="counter-row" data-type="child">
+                <span class="label">Children (3–11 years)</span>
+                <div class="btns_counter">
+                  <button class="counter-btn minus" type="button">-</button>
+                  <span class="count">0</span>
+                  <button class="counter-btn plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="counter-row" data-type="infant">
+                <span class="label">Infants (0–2 years)</span>
+                <div class="btns_counter">
+                  <button class="counter-btn minus" type="button">-</button>
+                  <span class="count">0</span>
+                  <button class="counter-btn plus" type="button">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step: Addons -->
+          <div class="booking-step twohead" data-step="addons" data-sticky="true">
+            <div class="step-header">
+              <div class="title-wrap">
+                <i class="fas fa-plus-circle"></i>
+                <h4>Add-ons</h4>
+              </div>
+              <div class="selected-summary"></div>
+            </div>
+            <div class="step-body addons-list">
+              <!-- Addon: Photo Package -->
+              <div class="addon-item" data-addon="photo" data-price="12">
+                <div class="addon-header">
+                  <div class="addon-info">
+                    <strong class="addon-name">Photo Package</strong>
+                    <p>Professional photography during your tour</p>
+                  </div>
+                  <p>Per item <span class="addon-price">€12</span></p>
+                  <div class="addon-qty">
+                    <button class="counter-btn minus" type="button">-</button>
+                    <span class="qty-count">0</span>
+                    <button class="counter-btn plus" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Addon: Scarf -->
+              <div class="addon-item" data-addon="scarf" data-price="5">
+                <div class="addon-header">
+                  <div class="addon-info">
+                    <strong class="addon-name">Scarf</strong>
+                    <p>Desert scarf for dust protection</p>
+                  </div>
+                  <p>Per item <span class="addon-price">€5</span></p>
+                  <div class="addon-qty">
+                    <button class="counter-btn minus" type="button">-</button>
+                    <span class="qty-count">0</span>
+                    <button class="counter-btn plus" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <!-- bookingDetails removed as requested -->
+          <div class="booking-summary sticky_bottom_booking">
+            <div class="summary-line">
+              <span>Total</span>
+              <strong id="bookingTotal">€17.50</strong>
+            </div>
+            <div class="btns">
+              <button class="save-edits-btn btn" type="button">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./cart-booking.js"></script>
+    <script src="./cart.js"></script>
+    <script src="../js/header.js"></script>
+  </body>
+</html>

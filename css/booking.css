@@ -1,0 +1,451 @@
+/* Booking Bottom Sheet Modal */
+.booking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.booking-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.booking-modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+  max-height: 85vh;
+  overflow: auto;
+}
+.booking-modal-overlay.show .booking-modal {
+  transform: translateY(0);
+}
+.booking-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 2;
+}
+.booking-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.booking-title-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.direct-booking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef6ff;
+  color: #27496b;
+  border: 1px solid #d7e4f2;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.direct-booking-badge i {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+.direct-booking-badge { position: relative; }
+.direct-booking-badge::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  background: #ffffff;
+  border: 1px solid #d7e4f2;
+  color: #27496b;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  width: 200px;
+  white-space: normal;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+.direct-booking-badge:hover::after,
+.direct-booking-badge:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 480px) {
+  .direct-booking-badge::after {
+    max-width: min(80vw, 260px);
+  }
+}
+@media (max-width: 480px) {
+  .direct-booking-badge {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+.booking-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+  z-index: 3;
+}
+
+.booking-step {
+  border: 1px solid #e6f5ed;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.booking-step .step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.booking-step.twohead .step-header,
+.booking-step.twohead .step-header{
+  flex-direction: column;
+  align-items: start;
+}
+.booking-step .title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* يسمح لعناصر إضافية مثل رسالة الفالديشن أن تنتقل لسطر جديد أسفل العنوان */
+  flex-wrap: wrap;
+  width: 100%;
+}
+.booking-step .step-header h4 {
+  margin: 0;
+  font-size: 14px;
+}
+.booking-step .selected-summary {
+  color: #c89b63;
+  font-weight: 600;
+  font-size: 14px;
+}
+.booking-step .required {
+  background: #ffdddd;
+  color: #a30000;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-inline-start: 6px;
+}
+.booking-step .step-body {
+  margin-top: 10px;
+}
+.booking-step.collapsed .step-body {
+  display: none;
+}
+.booking-step i {
+  color: #c89b63;
+}
+
+/* Date input */
+#bookingDate {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.hint {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Time options */
+.time-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.time-option {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+}
+.time-option.active {
+  background: #335c91;
+  color: #fff;
+  border-color: #335c91;
+}
+
+/* Language options */
+.lang-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+}
+.lang-option img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.lang-option.active {
+  background: #335c91;
+  color: #fff;
+  border-color: #335c91;
+}
+
+/* Options cards */
+.options-list {
+  display: block;
+}
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+.option-card .title {
+  font-weight: 600;
+}
+.option-card .price {
+  color: #2563eb;
+}
+.option-card input {
+  transform: scale(1.2);
+}
+
+/* Counters */
+.counters .counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+.counters .label {
+  font-weight: 600;
+  font-size: 14px;
+}
+.counter-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background: var(--bg-soft-color);
+  color: #111;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+
+}
+.counter-btn:active {
+  transform: scale(0.98);
+}
+.counter-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.count {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Locked counter row when participants are restricted */
+.counter-locked {
+  opacity: 0.6;
+}
+
+/* Restriction note above counters */
+.restriction-note {
+  background: #fff8db;
+  color: #5c5c00;
+  border: 1px solid #f2e6a3;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* Addons */
+.addons-list .addon-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.addon-price {
+  color: #2563eb;
+}
+/* Addon quantity controls */
+.addon-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.addon-qty .qty-count {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Summary */
+.booking-summary {
+  position: relative;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 12px;
+  border-radius: 12px;
+}
+.booking-summary .flexible_secure{
+  font-size: 12px;
+  padding: 4px 0;
+}
+.summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+}
+.summary-line span{
+  font-weight: bold;
+}
+.summary-details {
+  color: #374151;
+  font-size: 13px;
+}
+.summary-details .summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+.summary-details .summary-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  background: var(--bg-soft-color);
+}
+.confirm-booking-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (min-width: 1051px) {
+  .booking-modal {
+    left: 50%;
+    right: auto;
+    transform: translate(0, 100%);
+    width: 560px;
+    margin-left: -280px;
+    border-radius: 18px;
+  }
+  .booking-modal-overlay.show .booking-modal {
+    transform: translate(0, 0);
+  }
+}
+
+
+.expect-accordion {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .3s 
+ease;
+margin-top: 10px;
+}
+
+.expect-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #2e394a;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all .3s 
+ease;
+gap: 10px;
+color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+.expect-toggle i{
+  color: var(--sand-color);
+}
+
+.lead.text-muted {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+@media (min-width:1000px) {
+  section.product-card-section{
+    padding-top: 100px;
+  }
+}
